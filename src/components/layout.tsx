@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import Header from './header'
+import Header from './Header'
 
 interface ThemeProps {
   dark?: boolean
