@@ -1,8 +1,1 @@
-exports.createPages = ({ actions }) => {
-  actions.createRedirect({
-    fromPath: '/',
-    toPath: '/en',
-    isPermanent: true,
-    redirectInBrowser: true
-  })
-}
+module.exports = require('./src/config/gatsby-node')
