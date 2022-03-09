@@ -1,9 +1,9 @@
-import { GatsbyNode } from "gatsby"
+import { GatsbyNode } from 'gatsby'
 
-export const createPages: GatsbyNode["createPages"] = ({ actions }) => {
+export const createPages: GatsbyNode['createPages'] = ({ actions }) => {
   actions.createRedirect({
-    fromPath: "/",
-    toPath: "/en",
+    fromPath: '/',
+    toPath: '/en',
     isPermanent: true,
     redirectInBrowser: true,
   })

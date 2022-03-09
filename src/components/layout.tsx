@@ -1,8 +1,8 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled, { createGlobalStyle } from "styled-components"
+import * as React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled, { createGlobalStyle } from 'styled-components'
 
-import Header from "./header"
+import Header from './header'
 
 interface ThemeProps {
   dark?: boolean
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps>`
 body {
   margin: 0;
   /* This is an example on how to use theme props */
-  color: ${props => (props.dark ? "#fff" : "hsla(0, 0%, 0%, 0.8)")};
+  color: ${(props) => (props.dark ? '#fff' : 'hsla(0, 0%, 0%, 0.8)')};
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

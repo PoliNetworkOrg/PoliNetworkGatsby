@@ -1,5 +1,5 @@
-import { GatsbyConfig } from "gatsby"
-import path from "path"
+import { GatsbyConfig } from 'gatsby'
+import path from 'path'
 
 export default {
   siteMetadata: {
@@ -8,7 +8,7 @@ export default {
     author: `PoliNetworkOrg`,
     siteUrl: `https://polinetwork.org/`,
   },
-  pathPrefix: "/PoliNetworkGatsby",
+  pathPrefix: '/PoliNetworkGatsby',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -16,7 +16,7 @@ export default {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, "../images"),
+        path: path.join(__dirname, '../images'),
       },
     },
     `gatsby-transformer-sharp`,
@@ -38,13 +38,25 @@ export default {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    "gatsby-transformer-yaml",
+    'gatsby-transformer-yaml',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: "./data",
+        path: './data',
       },
     },
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
   ],
 } as GatsbyConfig
