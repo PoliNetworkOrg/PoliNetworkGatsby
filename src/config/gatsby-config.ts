@@ -58,5 +58,6 @@ export default {
         },
       },
     },
+    'gatsby-plugin-gatsby-cloud',
   ],
 } as GatsbyConfig
