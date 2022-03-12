@@ -4,14 +4,26 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import Header from './Header'
 
-interface CssVarsProps {
-  dark?: boolean
+// This is a sample global style
+const GlobalStyle = createGlobalStyle`
+html {
+  font: 112.5%/1.45em georgia, serif, sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+body {
+  margin: 0;
+  /* This is an example on how to use theme variables */
+  color: var(--maintext);
+  background-color: var(--mainbackground);
+  font-family: georgia, serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
 }
 
-function CssVars({ dark }: CssVarsProps) {
-  const Component = !dark
-    ? createGlobalStyle`
-html {
+/* CSS theme, imported from the old website */
+body {
   --tabbackground: #ffffff;
   --mainbackground: #f1f3f4;
   --maintext: #5f6368;
@@ -45,9 +57,7 @@ html {
   --displayNightToggle: flex;
   --bugColor: #FFFFFF;
 }
-`
-    : createGlobalStyle`
-html {
+body.dark {
   --tabbackground: #171717;
   --mainbackground: #121212;
   --maintext: #c4c4c4;
@@ -84,28 +94,6 @@ html {
 }
 `
 
-  return <Component />
-}
-
-// This is a sample global style
-const GlobalStyle = createGlobalStyle`
-html {
-  font: 112.5%/1.45em georgia, serif, sans-serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-body {
-  margin: 0;
-  /* This is an example on how to use theme props */
-  color: var(--maintext);
-  background-color: var(--mainbackground);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-}
-`
-
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 960;
@@ -133,7 +121,6 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <CssVars dark={true} />
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Wrapper>

@@ -8,6 +8,9 @@ export default {
     author: `PoliNetworkOrg`,
     siteUrl: `https://polinetwork.org/`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   pathPrefix: '/PoliNetworkGatsby',
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -59,5 +62,6 @@ export default {
       },
     },
     'gatsby-plugin-gatsby-cloud',
+    '@skagami/gatsby-plugin-dark-mode',
   ],
 } as GatsbyConfig

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import Seo from '../../components/Seo'
+import Seo from '../../components/Layout/Seo'
 
 const IndexPage = (props: any) => (
   <>

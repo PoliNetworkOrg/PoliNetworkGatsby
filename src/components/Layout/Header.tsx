@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import ThemeToggle from './ThemeToggle'
 
 interface HeaderProps {
   siteTitle: string
@@ -30,6 +31,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
           {siteTitle}
         </Link>
       </h1>
+      <ThemeToggle />
     </div>
   </header>
 )

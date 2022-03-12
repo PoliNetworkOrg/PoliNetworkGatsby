@@ -4,6 +4,7 @@
   "description": "The PoliNetwork website, ported to Gatsby",
   "version": "0.0.0",
   "dependencies": {
+    "@skagami/gatsby-plugin-dark-mode": "^2.0.0",
     "gatsby": "^4.8.0",
     "gatsby-plugin-gatsby-cloud": "^4.9.1",
     "gatsby-plugin-image": "^2.8.0",
@@ -17,8 +18,10 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-toggle": "^4.1.2",
     "styled-components": "^5.3.3",
-    "ts-node": "^10.7.0"
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
