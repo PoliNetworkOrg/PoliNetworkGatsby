@@ -38,6 +38,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "postinstall": "git submodule update --init --recursive",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.json,.md ./src",
