@@ -8,7 +8,7 @@ body {
   /* This is an example on how to use theme variables */
   color: var(--maintext);
   background-color: var(--mainbackground);
-  font-family: georgia, serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
