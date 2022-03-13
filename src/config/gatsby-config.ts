@@ -8,9 +8,6 @@ export default {
     author: `PoliNetworkOrg`,
     siteUrl: `https://polinetwork.org/`,
   },
-  flags: {
-    DEV_SSR: true,
-  },
   pathPrefix: '/PoliNetworkGatsby',
   plugins: [
     `gatsby-plugin-react-helmet`,
