@@ -1,7 +1,8 @@
 html {
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5% 1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  font-weight: 60 !important;
 }
 body {
   margin: 0;
@@ -12,6 +13,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  transition: 0.3s;
 }
 
 /* CSS theme, imported from the old website */

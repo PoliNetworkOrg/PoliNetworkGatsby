@@ -75,7 +75,12 @@ function Seo({ description = '', lang = 'en', meta = [], title }: SeoProps) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 

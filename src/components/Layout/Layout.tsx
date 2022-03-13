@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Header from './Header'
+import Seo from './Seo'
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -15,10 +16,11 @@ const Footer = styled.footer`
 `
 
 interface LayoutProps {
+  title: string
   children: any
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ title, children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -31,7 +33,11 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Seo title={title} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `PoliNetwork`}
+        pageTitle={title}
+      />
       <Wrapper>
         <main>{children}</main>
         <Footer>

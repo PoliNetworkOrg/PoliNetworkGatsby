@@ -2,12 +2,10 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import Seo from '../../components/Layout/Seo'
 import Layout from '../../components/Layout/Layout'
 
 const IndexPage = (props: any) => (
-  <Layout>
-    <Seo title="Home" />
+  <Layout title="Home">
     <h1>Hi people. Language: {props.params.key}</h1>
     <p>{JSON.stringify(props, null, 2)}</p>
     <p>Now go build something great.</p>
